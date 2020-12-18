@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.CommonPage.AdminRoleInfoPage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Icon="ic_add_white.png"
+                     Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="10">
+        <!--List Student-->
+        <ListView x:Name="ListViewAccounts"
+                      ItemsSource="{Binding Accounts}"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_OnItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="2,4"
+                                   Padding="10"
+                                   CornerRadius="5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <!--<ColumnDefinition Width="*"/>-->
+                                </Grid.ColumnDefinitions>
+
+                                <!--Avatar & Student ID-->
+                                <StackLayout Grid.Column="0"
+                                             Margin="0,0,7,0">
+                                    <Image Source="{Binding Avatar}"
+                                           HeightRequest="65"
+                                           WidthRequest="65"/>
+                                    <Frame BackgroundColor="Pink"
+                                               CornerRadius="3"
+                                               Padding="0"
+                                               WidthRequest="67"
+                                               HorizontalOptions="Center">
+                                        <Label Text="{Binding Role}"
+                                                   FontSize="{StaticResource SmallFontSize}"
+                                                   HorizontalTextAlignment="Center"
+                                           LineBreakMode="WordWrap"/>
+                                    </Frame>
+                                </StackLayout>
+
+                                <Grid Grid.Column="1"
+                                      RowSpacing="10"
+                                      VerticalOptions="CenterAndExpand"
+                                      Margin="10,0,0,0">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!--Account Name-->
+                                    <Label Text="{Binding Name}"
+                                           TextColor="{StaticResource Grade10ClassNameColor}"
+                                           FontSize="{StaticResource LargeFontSize}"
+                                           FontAttributes="Bold"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="2"/>
+
+                                    <!--Username-->
+                                    <Label Text="{StaticResource PersonIcon}"
+                                           TextColor="Brown"
+                                           Style="{StaticResource ListSmallItemIconStyle}"
+                                           Grid.Row="1"
+                                           Grid.Column="0"/>
+                                    <Label Text="{Binding UserName}"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"
+                                           Grid.Row="1"
+                                           Grid.Column="1"/>
+
+                                    <!--Password-->
+                                    <Label Text="{StaticResource LockIcon}"
+                                           TextColor="Brown"
+                                           Style="{StaticResource ListSmallItemIconStyle}"
+                                           Grid.Row="2"
+                                           Grid.Column="0"/>
+                                    <Label Text="{Binding Password}"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"
+                                           Grid.Row="2"
+                                           Grid.Column="1"/>
+                                </Grid>
+
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

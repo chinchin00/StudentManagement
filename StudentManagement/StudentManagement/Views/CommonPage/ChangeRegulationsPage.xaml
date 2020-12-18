@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.CommonPage.ChangeRegulationsPage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,15">
+                <!--Tuổi tối thiểu-->
+                <Label Text="Tuổi tối thiểu:" />
+                <Entry Text="{Binding Settings.MinStudentAge}"/>
+
+                <!--Tuổi tối đa-->
+                <Label Text="Tuổi tối đa:" />
+                <Entry Text="{Binding Settings.MaxStudentAge}"/>
+
+                <!--Số lượng học sinh tối đa mỗi lớp-->
+                <Label Text="Số lượng học sinh tối đa mỗi lớp:" />
+                <Entry Text="{Binding Settings.MaxStudentPerClass}"/>
+
+                <!--Điểm đạt môn-->
+                <Label Text="Điểm đạt môn:"/>
+                <Entry Text="{Binding Settings.SubjectPassScore}"/>
+
+                <Button Text="Thay đổi thông tin lớp"
+                        VerticalOptions="EndAndExpand"
+                        Command="{Binding ChangeClassesInfoCommand}"/>
+
+                <Button Text="Thay đổi thông tin môn học"
+                        Command="{Binding ChangeSubjectsInfoCommand}"/>
+
+                <Button Text="Lưu"
+                        Command="{Binding SaveCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

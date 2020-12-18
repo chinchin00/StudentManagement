@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="StudentManagement.Views.Popups.AddSubjectPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="200"
+            DurationOut="200"
+            EasingIn="CubicOut"
+            EasingOut="CubicOut"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame BackgroundColor="#ffffff"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="FillAndExpand"
+           Margin="15"
+           Padding="20"
+           CornerRadius="3"
+           HasShadow="False">
+        <Grid Grid.RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Thêm môn học:"
+                   TextColor="#1f4788"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
+
+            <Entry x:Name="EntrySubjectName"
+                   TextColor="#1f4788"
+                   FontSize="16"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="0,15,0,0"/>
+
+            <Label x:Name="LabelWrong"
+                   TextColor="Red"
+                   FontSize="11"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="0,0,0,15"
+                   IsVisible="False"/>
+
+            <Button Text="Hủy"
+                    Clicked="ButtonCancel_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
+
+            <Button Text="Xác nhận"
+                    Clicked="ButtonConfirm_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+        </Grid>
+    </Frame>
+</pages:PopupPage>

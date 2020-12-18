@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:StudentManagement.Converters;assembly=StudentManagement"
+             x:Class="StudentManagement.Views.AddStudentsFlow.ChooseClassPage"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToStringConverter x:Key="StatusIcon"
+                                              FalseValue="{StaticResource CircleCheckIcon}"
+                                              TrueValue="{StaticResource CircleNoticeIcon}"/>
+            <converters:BoolToStringConverter x:Key="StatusText"
+                                              FalseValue="Sẵn sàng"
+                                              TrueValue="Đã đầy"/>
+            <converters:BoolToColorConverter x:Key="StatusColor"
+                                             FalseValue="Green"
+                                             TrueValue="Red"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Chọn lớp:" 
+                   TextColor="{StaticResource Grade10ClassNameColor}"
+                   FontAttributes="Bold"
+                   FontSize="{StaticResource XLargeFontSize}"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,30"/>
+
+            <!--List Classes-->
+            <ListView x:Name="ListViewClasses"
+                      ItemsSource="{Binding Classes}"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="2,4"
+                                   Padding="10"
+                                   BackgroundColor="{StaticResource Grade10ClassBackgroundColor}"
+                                   CornerRadius="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <!--Class name-->
+                                    <Label Text="{Binding Name}"
+                                           TextColor="{StaticResource Grade10ClassNameColor}"
+                                           FontSize="{StaticResource LargeFontSize}"
+                                           FontAttributes="Bold"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalOptions="FillAndExpand"
+                                           Margin="20,0,0,0"/>
+
+                                    <!--Si so-->
+                                    <Label Text="{StaticResource PeopleIcon}"
+                                           TextColor="Purple"
+                                           Style="{StaticResource ListSmallItemIconStyle}"
+                                           Margin="0,3,0,0"/>
+                                    <Label Text="{Binding Students}"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"
+                                           Margin="0"/>
+                                    <Label Text="/"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"
+                                           Margin="0"/>
+                                    <Label Text="{Binding MaxStudents}"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"/>
+
+                                    <!--Trang thai-->
+                                    <Label Text="{Binding IsFull, Converter={StaticResource StatusIcon}}"
+                                           TextColor="{Binding IsFull, Converter={StaticResource StatusColor}}"
+                                           Style="{StaticResource ListSmallItemIconStyle}"
+                                           FontSize="{StaticResource LargeFontSize}"/>
+                                    <Label Text="{Binding IsFull, Converter={StaticResource StatusText}}"
+                                           TextColor="{Binding IsFull, Converter={StaticResource StatusColor}}"
+                                           Style="{StaticResource ListSmallItemLabelStyle}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

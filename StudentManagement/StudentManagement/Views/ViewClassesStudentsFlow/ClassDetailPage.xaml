@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             x:Class="StudentManagement.Views.ViewClassesStudentsFlow.ClassDetailPage"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <Grid Padding="10"
+              RowSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Class name-->
+            <Label Text="{Binding ClassName}" 
+                   TextColor="{StaticResource Grade10ClassNameColor}"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Margin="0,50,0,30"/>
+
+            <!--So luong hoc sinh-->
+            <Label Text="{StaticResource PeopleIcon}"
+                   TextColor="Purple"
+                   Style="{StaticResource MediumLabelIconStyle}"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Label Text="Số lượng học sinh:"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            <Label Text="{Binding NumberOfStudent}"
+                   Grid.Row="1"
+                   Grid.Column="2"/>
+
+            <!--So luong Nam-->
+            <Label Text="{StaticResource MaleIcon}"
+                   TextColor="Green"
+                   Style="{StaticResource MediumLabelIconStyle}"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            <Label Text="Số lượng Nam:"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+            <Label Text="{Binding NumberOfBoy}"
+                   Grid.Row="2"
+                   Grid.Column="2"/>
+
+            <!--So luong Nu-->
+            <Label Text="{StaticResource FemaleIcon}"
+                   TextColor="{StaticResource PinkColor}"
+                   Style="{StaticResource MediumLabelIconStyle}"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            <Label Text="Số lượng Nữ:"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+            <Label Text="{Binding NumberOfGirl}"
+                   Grid.Row="3"
+                   Grid.Column="2"/>
+
+            <!--#region Thong tin lop-->
+            <Grid
+                Grid.Column="0"
+                Grid.Row="4"
+                Grid.ColumnSpan="3"
+                VerticalOptions="End"
+                IsVisible="{Binding IsClassInfo}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--Xem danh sach lop-->
+                <Button Text="Xem danh sách lớp"
+                        BackgroundColor="{StaticResource Grade10ClassNameColor}"
+                        Command="{Binding ViewListStudentCommand}"/>
+
+                <!--Bang diem lop-->
+                <Button Grid.Column="1"
+                        Text="Bảng điểm lớp"
+                        BackgroundColor="#6897bb"
+                        Command="{Binding ViewScoreBoardCommand}"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Tiep nhan hoc sinh-->
+            <!--Dong y-->
+            <Button Grid.Column="0"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="3"
+                    Text="Đồng ý"
+                    Command="{Binding AcceptCommand}"
+                    VerticalOptions="End"
+                    IsVisible="{Binding IsClassAcceptStudent}"/>
+            <!--#endregion-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.AddStudentsFlow.InputScorePage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Padding="15,15,15,0" 
+                      RowSpacing="0"
+                      ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Picker Lớp-->
+                <Label Text="Lớp:"
+                           FontSize="{StaticResource SmallFontSize}"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                <controls:CustomPicker
+                            Title="Chọn lớp"
+                            ItemsSource="{Binding ClassNames}"
+                            SelectedItem="{Binding ClassNameSelected}"
+                            FontSize="{StaticResource MediumFontSize}"
+                            Border="Normal"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                    Margin="0,0,10,0"/>
+
+                <!--Picker Học sinh-->
+                <Label Text="Học sinh:"
+                           FontSize="{StaticResource SmallFontSize}"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+                <controls:CustomPicker
+                            Title="Chọn học sinh"
+                            ItemsSource="{Binding StudentNames}"
+                            SelectedItem="{Binding StudentNameSelected}"
+                            FontSize="{StaticResource MediumFontSize}"
+                            Border="Normal"
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+
+                <!--Picker Mon hoc-->
+                <Label Text="Môn học:"
+                           FontSize="{StaticResource SmallFontSize}"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           Margin="0,8,0,0"/>
+                <controls:CustomPicker
+                            Title="Chọn môn học"
+                            ItemsSource="{Binding SubjectNames}"
+                            SelectedItem="{Binding SubjectNameSelected}"
+                            FontSize="{StaticResource MediumFontSize}"
+                            Border="Normal"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                    Margin="0,0,10,0"/>
+
+                <!--Picker Hoc ky-->
+                <Label Text="Học kỳ:"
+                           FontSize="{StaticResource SmallFontSize}"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           Margin="0,8,0,0"/>
+                <controls:CustomPicker
+                            Title="Chọn học kỳ"
+                            SelectedItem="{Binding SemesterName}"
+                            FontSize="{StaticResource MediumFontSize}"
+                            Border="Normal"
+                            Grid.Row="3"
+                            Grid.Column="1">
+                    <controls:CustomPicker.Items>
+                        <x:String>Học kỳ 1</x:String>
+                        <x:String>Học kỳ 2</x:String>
+                    </controls:CustomPicker.Items>
+                </controls:CustomPicker>
+
+                <Label Text="Nhập bảng điểm môn:"
+                           TextColor="{StaticResource Grade10ClassNameColor}"
+                           FontAttributes="Bold"
+                           FontSize="{StaticResource XLargeFontSize}"
+                           HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                           Grid.Row="4"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           Margin="0,20,0,5"/>
+
+                <!--Diem 15 phut-->
+                <Label Text="Điểm 15 phút:"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Margin="20,15,20,0"
+                           Grid.Row="5"
+                           Grid.Column="0"/>
+                <Entry Text="{Binding Score15M}"
+                           FontSize="{StaticResource LargeFontSize}"
+                           Grid.Row="5"
+                           Grid.Column="1"
+                           Keyboard="Numeric"
+                           Margin="0,0,20,0"
+                           HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="EndAndExpand"/>
+
+                <!--Diem 45 phut-->
+                <Label Text="Điểm 45 phút:"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Margin="20,15,20,0"
+                           Grid.Row="6"
+                           Grid.Column="0"/>
+                <Entry Text="{Binding Score45M}"
+                           FontSize="{StaticResource LargeFontSize}"
+                           Grid.Row="6"
+                           Grid.Column="1"
+                           Keyboard="Numeric"
+                           Margin="0,0,20,0"
+                           HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="EndAndExpand"/>
+
+                <!--Diem cuoi ky-->
+                <Label Text="Điểm cuối kỳ:"
+                           FontSize="{StaticResource MediumFontSize}"
+                           Margin="20,15,20,0"
+                           Grid.Row="7"
+                           Grid.Column="0"/>
+                <Entry Text="{Binding ScoreFinal}"
+                           FontSize="{StaticResource LargeFontSize}"
+                           Grid.Row="7"
+                           Grid.Column="1"
+                           Keyboard="Numeric"
+                           Margin="0,0,20,0"
+                           HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="EndAndExpand"/>
+
+                <!--Diem trung binh-->
+                <Label Text="Điểm trung bình:"
+                           FontSize="{StaticResource MediumFontSize}"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="CenterAndExpand"
+                           Margin="20,18,20,0"
+                           Grid.Row="8"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"/>
+                <Label Text="{Binding ScoreAverage}"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="{StaticResource XLargeFontSize}"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       Grid.Row="9"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Margin="20,10,20,0"/>
+            </Grid>
+
+            <!--Save-->
+            <Button Text="Save"
+                Command="{Binding SaveCommand}"
+                Grid.Row="1"
+                HorizontalOptions="FillAndExpand"
+                Margin="10,0,10,10"
+                VerticalOptions="End"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

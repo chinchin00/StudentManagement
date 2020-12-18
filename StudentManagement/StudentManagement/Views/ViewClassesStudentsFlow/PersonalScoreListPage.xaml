@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.ViewClassesStudentsFlow.PersonalScoreListPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <ListView x:Name="ListPersonalScore"
+                  ItemsSource="{Binding Subjects}"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="True"
+                  ItemTapped="ListView_OnItemTapped"
+                  Grid.Row="2"
+                  Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="#c6f2f1"
+                               Padding="20"
+                               Margin="2,4"
+                               CornerRadius="5"
+                               VerticalOptions="Start">
+                            <Grid RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}"
+                                       TextColor="#076f30"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       Grid.Column="1"
+                                       VerticalOptions="Center"/>
+
+                                <Label Text="{Binding ScoreAvg, StringFormat='{0:0.0}'}"
+                                       FontAttributes="Bold"
+                                       TextColor="#076f30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"
+                                       FontSize="16"
+                                       Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

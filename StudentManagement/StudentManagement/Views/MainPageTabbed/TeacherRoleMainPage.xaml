@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xamarinForms:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.MainPageTabbed.TeacherRoleMainPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:xamarinForms="clr-namespace:BottomBar.XamarinForms;assembly=StudentManagement"
+             xmlns:viewClassesStudentsFlow="clr-namespace:StudentManagement.Views.ViewClassesStudentsFlow;assembly=StudentManagement"
+             xmlns:commonPage="clr-namespace:StudentManagement.Views.CommonPage;assembly=StudentManagement"
+             xmlns:addStudentsFlow="clr-namespace:StudentManagement.Views.AddStudentsFlow;assembly=StudentManagement"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+
+    <NavigationPage Icon="ic_home.png"
+                    Title="Class Info">
+        <x:Arguments>
+            <viewClassesStudentsFlow:ClassDetailPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Input score"
+                    Icon="ic_input_score.png">
+        <x:Arguments>
+            <addStudentsFlow:InputScorePage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Class Reports"
+                    Icon="ic_Report.png">
+        <x:Arguments>
+            <viewClassesStudentsFlow:ScoreBoardPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Settings"
+                    Icon="ic_Settings.png">
+        <x:Arguments>
+            <commonPage:SettingsPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+
+</xamarinForms:BottomBarPage>

@@ -1,0 +1,92 @@
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.deps.json
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.dll
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\ref\StudentManagement.dll
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.pdb
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.csprojAssemblyReference.cache
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\AddNewStudentPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\ChooseClassPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\InputScorePage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\SearchPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\AdminRoleInfoPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeClassesInfoPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeRegulationsPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeSubjectsInfoPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\LoginPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\SettingsPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\AdminRoleMainPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\PrincipalRoleMainPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\StudentRoleMainPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\TeacherRoleMainPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddClassPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddSubjectPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddUserPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\ConfirmPasswordPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\EditClassPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\EditSubjectPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\LoadingPopup.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportBySemesterPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportBySubjectPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportHomePage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\StudentScorePage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\StudentScoreTab.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ClassDetailPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ClassesPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\HomePage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\PersonalScoreListPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ScoreBoardPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\StudentDetailPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\StudentsPage.xaml.g.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.AssemblyInfoInputs.cache
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.AssemblyInfo.cs
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.csproj.CoreCompileInputs.cache
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\XamlC.stamp
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.dll
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\ref\StudentManagement.dll
+D:\UIT\Nhập môn công nghệ phần mềm\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.pdb
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.deps.json
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.dll
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\ref\StudentManagement.dll
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\bin\Debug\netstandard2.0\StudentManagement.pdb
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.csprojAssemblyReference.cache
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\AddNewStudentPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\ChooseClassPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\InputScorePage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\AddStudentsFlow\SearchPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\AdminRoleInfoPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeClassesInfoPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeRegulationsPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\ChangeSubjectsInfoPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\LoginPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\CommonPage\SettingsPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\AdminRoleMainPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\PrincipalRoleMainPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\StudentRoleMainPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\MainPageTabbed\TeacherRoleMainPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddClassPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddSubjectPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\AddUserPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\ConfirmPasswordPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\EditClassPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\EditSubjectPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\Popups\LoadingPopup.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportBySemesterPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportBySubjectPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\ReportHomePage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\StudentScorePage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ReportsFlow\StudentScoreTab.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ClassDetailPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ClassesPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\HomePage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\PersonalScoreListPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\ScoreBoardPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\StudentDetailPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\Views\ViewClassesStudentsFlow\StudentsPage.xaml.g.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.AssemblyInfoInputs.cache
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.AssemblyInfo.cs
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.csproj.CoreCompileInputs.cache
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\XamlC.stamp
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.dll
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\ref\StudentManagement.dll
+D:\UIT\NMCNPM\StudentManagement\StudentManagement\StudentManagement\obj\Debug\netstandard2.0\StudentManagement.pdb

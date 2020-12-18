@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.ViewClassesStudentsFlow.ScoreBoardPage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Picker Mon hoc-->
+            <Label Text="Môn học:"
+                   FontSize="{StaticResource SmallFontSize}"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <controls:CustomPicker
+                Title="Chọn môn học"
+                ItemsSource="{Binding SubjectNames}"
+                SelectedItem="{Binding SubjectNameSelected}"
+                FontSize="{StaticResource MediumFontSize}"
+                Border="Normal"
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+            <!--Picker Hoc ky-->
+            <Label Text="Học kỳ:"
+                   FontSize="{StaticResource SmallFontSize}"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <controls:CustomPicker
+                Title="Chọn học kỳ"
+                SelectedItem="{Binding SemesterName}"
+                FontSize="{StaticResource MediumFontSize}"
+                Border="Normal"
+                Grid.Row="1"
+                Grid.Column="1">
+                <controls:CustomPicker.Items>
+                    <x:String>Học kỳ 1</x:String>
+                    <x:String>Học kỳ 2</x:String>
+                </controls:CustomPicker.Items>
+            </controls:CustomPicker>
+
+            <Label Text="Bảng điểm môn:"
+                   TextColor="{StaticResource Grade10ClassNameColor}"
+                   FontAttributes="Bold"
+                   FontSize="{StaticResource XLargeFontSize}"
+                   HorizontalOptions="Center"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"/>
+
+            <!--List score board-->
+            <ListView x:Name="ListScoreBoard"
+                      ItemsSource="{Binding Students}"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_OnItemTapped"
+                      Grid.Row="3"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="White"
+                                   Padding="5"
+                                   Margin="2,4"
+                                   CornerRadius="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <!--Ma hoc sinh & Ho va ten-->
+                                    <StackLayout Orientation="Horizontal"
+                                                 Grid.Row="0"
+                                                 Grid.Column="0"
+                                                 Grid.ColumnSpan="4">
+                                        <Frame BackgroundColor="Pink"
+                                               CornerRadius="3"
+                                               Padding="0"
+                                               WidthRequest="45"
+                                               VerticalOptions="Center">
+                                            <Label Text="{Binding Id}"
+                                                   FontSize="{StaticResource SmallFontSize}"
+                                                   HorizontalOptions="Center" />
+                                        </Frame>
+                                        <Label Text="{Binding FullName}"
+                                               TextColor="{StaticResource Grade10ClassNameColor}"
+                                               FontSize="{StaticResource LargeFontSize}"
+                                               FontAttributes="Bold" />
+                                    </StackLayout>
+
+                                    <!--Diem 15 phut-->
+                                    <Frame BackgroundColor="#ffe1bb"
+                                           CornerRadius="3"
+                                           Padding="10,0"
+                                           Grid.Row="1"
+                                           Grid.Column="0">
+                                        <Label Text="Điểm 15 phút"
+                                               TextColor="Black"
+                                               FontSize="{StaticResource SmallFontSize}"
+                                               HorizontalOptions="Center" />
+                                    </Frame>
+                                    <Label Text="{Binding Score.Score15M}"
+                                           FontSize="{StaticResource MediumFontSize}"
+                                           VerticalTextAlignment="Center"
+                                           Margin="10,0,0,0"
+                                           Grid.Row="1"
+                                           Grid.Column="1" />
+
+                                    <!--Diem 45 phut-->
+                                    <Frame BackgroundColor="#f1ffbb"
+                                           CornerRadius="3"
+                                           Padding="10,0"
+                                           Grid.Row="2"
+                                           Grid.Column="0">
+                                        <Label Text="Điểm 45 phút"
+                                               TextColor="Black"
+                                               FontSize="{StaticResource SmallFontSize}"
+                                               HorizontalOptions="Center" />
+                                    </Frame>
+                                    <Label Text="{Binding Score.Score45M}"
+                                           FontSize="{StaticResource MediumFontSize}"
+                                           VerticalTextAlignment="Center"
+                                           Margin="10,0,0,0"
+                                           Grid.Row="2"
+                                           Grid.Column="1" />
+
+                                    <!--Diem cuoi ky-->
+                                    <Frame BackgroundColor="#c8fff5"
+                                           CornerRadius="3"
+                                           Padding="10,0"
+                                           Grid.Row="3"
+                                           Grid.Column="0">
+                                        <Label Text="Điểm cuối kỳ"
+                                               TextColor="Black"
+                                               FontSize="{StaticResource SmallFontSize}"
+                                               HorizontalOptions="Center" />
+                                    </Frame>
+                                    <Label Text="{Binding Score.ScoreFinal}"
+                                           FontSize="{StaticResource MediumFontSize}"
+                                           VerticalTextAlignment="Center"
+                                           Margin="10,0,0,0"
+                                           Grid.Row="3"
+                                           Grid.Column="1" />
+
+                                    <BoxView Color="{StaticResource Grade10ClassNameColor}"
+                                             WidthRequest="0.5"
+                                             Grid.Row="1"
+                                             Grid.Column="2"
+                                             Grid.RowSpan="3"
+                                             Margin="0,5" 
+                                             HorizontalOptions="Center"/>
+
+                                    <!--Diem trung binh-->
+                                    <Label Text="Trung bình:"
+                                           FontSize="{StaticResource SmallFontSize}"
+                                           Grid.Row="1"
+                                           Grid.Column="3"
+                                           HorizontalOptions="Center" />
+                                    <Label Text="{Binding Score.ScoreAverage, StringFormat='{0:0.0}'}"
+                                           TextColor="Blue"
+                                           FontAttributes="Bold"
+                                           FontSize="{StaticResource XLargeFontSize}"
+                                           Grid.Row="2"
+                                           Grid.RowSpan="2"
+                                           Grid.Column="3"
+                                           HorizontalOptions="Center"
+                                           VerticalTextAlignment="Center" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

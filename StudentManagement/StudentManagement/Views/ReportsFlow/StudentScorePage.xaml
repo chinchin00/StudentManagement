@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.ReportsFlow.StudentScorePage"
+             Title="{Binding PageTitle}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--Background-->
+                <BoxView Color="{StaticResource Grade10ClassBackgroundColor}"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     Grid.RowSpan="2"/>
+
+                <!--Avatar-->
+                <Image Source="{Binding StudentInfo.Avatar}"
+                   HorizontalOptions="Center"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="20,20,20,0"/>
+
+                <!--Name-->
+                <Label Text="{Binding StudentInfo.FullName}" 
+                       TextColor="{StaticResource Grade10ClassNameColor}"
+                       FontAttributes="Bold"
+                       FontSize="{StaticResource XLargeFontSize}"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="20,10,20,15"/>
+
+                <!--Diem 15 phut-->
+                <Label Text="Điểm 15 phút:"
+                   FontSize="{StaticResource MediumFontSize}"
+                   Margin="20,10,20,0"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+                <Entry Text="{Binding Score15Mins}"
+                   FontSize="{StaticResource LargeFontSize}"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Keyboard="Numeric"
+                   Margin="20,0,20,0"
+                   IsEnabled="{Binding IsEditMode}"/>
+
+                <!--Diem 45 phut-->
+                <Label Text="Điểm 45 phút:"
+                   FontSize="{StaticResource MediumFontSize}"
+                   Margin="20,10,20,0"
+                   Grid.Row="4"
+                   Grid.Column="0"/>
+                <Entry Text="{Binding Score45Mins}"
+                   FontSize="{StaticResource LargeFontSize}"
+                   Grid.Row="5"
+                   Grid.Column="0"
+                   Keyboard="Numeric"
+                   Margin="20,0,20,0"
+                   IsEnabled="{Binding IsEditMode}"/>
+
+                <!--Diem cuoi ky-->
+                <Label Text="Điểm cuối kỳ:"
+                   FontSize="{StaticResource MediumFontSize}"
+                   Margin="20,10,20,0"
+                   Grid.Row="6"
+                   Grid.Column="0"/>
+                <Entry Text="{Binding ScoreFinal}"
+                   FontSize="{StaticResource LargeFontSize}"
+                   Grid.Row="7"
+                   Grid.Column="0"
+                   Keyboard="Numeric"
+                   Margin="20,0,20,0"
+                   IsEnabled="{Binding IsEditMode}"/>
+
+                <!--Diem trung binh-->
+                <Label Text="Điểm trung bình:"
+                   FontSize="{StaticResource MediumFontSize}"
+                   HorizontalTextAlignment="Center"
+                   Margin="20,10,20,0"
+                   Grid.Row="8"
+                   Grid.Column="0"/>
+                <Label Text="{Binding ScoreAvg, StringFormat='{0:0.0}'}" 
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="{StaticResource XLargeFontSize}"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       Grid.Row="9"
+                       Grid.Column="0"
+                       Margin="20,10,20,15"/>
+
+                <!--Bottom buttons-->
+                <!--<Grid Grid.Row="10"
+                  Grid.Column="0"
+                  VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="Clear"
+                        Command="{Binding ClearCommand}"
+                        Grid.Column="0"/>
+                <Button Text="Save"
+                        Command="{Binding SaveCommand}"
+                        Grid.Column="1"/>
+            </Grid>-->
+                <Button Text="Save"
+                    Command="{Binding SaveCommand}"
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    VerticalOptions="End"
+                    IsVisible="{Binding IsEditMode}"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

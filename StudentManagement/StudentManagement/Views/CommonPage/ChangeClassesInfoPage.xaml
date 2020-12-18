@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.CommonPage.ChangeClassesInfoPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Icon="ic_add_white.png"
+                     Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView
+            x:Name="ListClasses"
+            ItemsSource="{Binding Classes}"
+            HasUnevenRows="True"
+            ItemTapped="ListView_OnItemTapped"
+            Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="20,15">
+                            <Label Text="{Binding Name}"
+                                   TextColor="#1f4788"
+                                   FontSize="{StaticResource LargeFontSize}"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="StartAndExpand"/>
+
+                            <Image Source="ic_edit_blue.png"
+                                   WidthRequest="25"
+                                   HeightRequest="25"
+                                   VerticalOptions="Center"
+                                   Margin="20,0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="EditIcon_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Source="ic_garbage_bin_red.png"
+                                   WidthRequest="25"
+                                   HeightRequest="25"
+                                   VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="RemoveIcon_Tapped"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

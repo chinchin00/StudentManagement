@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.ViewClassesStudentsFlow.ClassesPage"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             Title="Danh sách">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search"
+                     Icon="ic_search_white.png"
+                     Command="{Binding SearchToolbarItemsCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10"
+                     Spacing="10">
+            <!--Search Box-->
+            <Frame CornerRadius="10"
+                   BackgroundColor="White"
+                   Padding="10,0,0,0"
+                   IsVisible="{Binding ShowSearchBox}">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="0">
+                    <controls:CustomEntry
+                        Text="{Binding SearchText}"
+                        FontSize="{StaticResource MediumFontSize}"
+                        Border="None"
+                        Placeholder="Nhập tên lớp"
+                        HorizontalOptions="FillAndExpand" />
+                    <Grid Padding="5"
+                          BackgroundColor="{Binding ClickedFilterBackgroundColor}"
+                          ColumnSpacing="0"
+                          RowSpacing="0">
+                        <!--BackgroundColor="#F1EFEF"-->
+                        <Image Source="ic_filter.png"
+                               WidthRequest="15"
+                               HeightRequest="15"
+                               Margin="8,0"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding FilterIconCommand}"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                    <BoxView WidthRequest="0.75"
+                             VerticalOptions="FillAndExpand"
+                             Color="Gray"/>
+                    <Grid Padding="5"
+                          BackgroundColor="{Binding ClickedSearchBackgroundColor}"
+                          ColumnSpacing="0"
+                          RowSpacing="0">
+                        <Label Text="{StaticResource SearchIcon}"
+                               TextColor="Purple"
+                               Style="{StaticResource MediumLabelIconStyle}"
+                               Margin="8,0"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SearchIconCommand}"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+            <!--List Classes-->
+            <ListView x:Name="ListViewClasses"
+                      ItemsSource="{Binding Classes}"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="2,4"
+                                       Padding="10"
+                                       CornerRadius="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <!--Class name-->
+                                    <Label Text="{Binding Name}"
+                                               TextColor="{StaticResource Grade10ClassNameColor}"
+                                               FontSize="{StaticResource LargeFontSize}"
+                                               FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalOptions="FillAndExpand"
+                                               Margin="20,0,0,0"/>
+
+                                    <!--Si so-->
+                                    <Label Text="{StaticResource PeopleIcon}"
+                                               TextColor="Purple"
+                                               Style="{StaticResource ListSmallItemIconStyle}"
+                                               Margin="0,3,0,0"/>
+                                    <Label Text="{Binding Students}"
+                                               Style="{StaticResource ListSmallItemLabelStyle}"/>
+
+                                    <!--Nam-->
+                                    <Label Text="{StaticResource MaleIcon}"
+                                               TextColor="Green"
+                                               Style="{StaticResource ListSmallItemIconStyle}"
+                                               FontSize="{StaticResource LargeFontSize}"/>
+                                    <Label Text="{Binding Boys}"
+                                               Style="{StaticResource ListSmallItemLabelStyle}"/>
+
+                                    <!--Nu-->
+                                    <Label Text="{StaticResource FemaleIcon}"
+                                               TextColor="{StaticResource PinkColor}"
+                                               Style="{StaticResource ListSmallItemIconStyle}"
+                                               FontSize="{StaticResource LargeFontSize}"/>
+                                    <Label Text="{Binding Girls}"
+                                               Style="{StaticResource ListSmallItemLabelStyle}"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

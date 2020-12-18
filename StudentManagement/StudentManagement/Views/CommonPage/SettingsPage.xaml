@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.CommonPage.SettingsPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <!--Header-->
+            <StackLayout BackgroundColor="{StaticResource MenuBackgroundHeaderColor}"
+                                 Padding="30">
+                <Image Source="{Binding CurrentUser.Avatar}"
+                               WidthRequest="100"
+                               HeightRequest="100"
+                               HorizontalOptions="Center"
+                               Margin="0,20,0,10" />
+                <Label Text="{Binding CurrentUser.Name}"
+                               TextColor="White"
+                               FontSize="{StaticResource XxLargeFontSize}"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center" />
+                <Label Text="{Binding CurrentUser.Role}"
+                               TextColor="{StaticResource MenuHeaderJobColor}"
+                               FontSize="{StaticResource MediumFontSize}"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Italic, Bold"/>
+            </StackLayout>
+
+            <!--Features-->
+            <StackLayout VerticalOptions="FillAndExpand"
+                                 BackgroundColor="{StaticResource MenuBackgroundFeaturesColor}"
+                                 Padding="20"
+                                 Spacing="25">
+
+                <!--Phân quyền-->
+                <Grid ColumnSpacing="{StaticResource MenuFeaturesColumnSpacing}"
+                      IsVisible="{Binding IsRoleVisible}"
+                      HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{StaticResource MenuFeaturesIconWidth}" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                           Text="{StaticResource FlagIcon}"
+                           Style="{StaticResource MenuFeaturesIconStyle}" />
+                    <Label Grid.Column="1"
+                           Text="Phân quyền"
+                           Style="{StaticResource MenuFeaturesLabelStyle}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RoleCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+
+                <!--Thay doi quy dinh-->
+                <Grid ColumnSpacing="{StaticResource MenuFeaturesColumnSpacing}"
+                      IsVisible="{Binding IsSettingVisible}"
+                      HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{StaticResource MenuFeaturesIconWidth}" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                                   Text="{StaticResource GearIcon}"
+                                   Style="{StaticResource MenuFeaturesIconStyle}" />
+                    <Label Grid.Column="1"
+                                   Text="Thay đổi quy định"
+                                   Style="{StaticResource MenuFeaturesLabelStyle}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SettingCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+
+                <!--Dang xuat-->
+                <Grid ColumnSpacing="{StaticResource MenuFeaturesColumnSpacing}"
+                      HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{StaticResource MenuFeaturesIconWidth}" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                                   Text="{StaticResource LogOutIcon}"
+                                   Style="{StaticResource MenuFeaturesIconStyle}" />
+                    <Label Grid.Column="1"
+                                   Text="Đăng xuất"
+                                   Style="{StaticResource MenuFeaturesLabelStyle}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogOutCommand}" />
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="StudentManagement.Views.ReportsFlow.ReportBySemesterPage"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--Picker Hoc ky-->
+            <Label Text="Học kỳ:"
+                   FontSize="{StaticResource SmallFontSize}"
+                   Grid.Row="0"/>
+            <controls:CustomPicker
+                Title="Chọn học kỳ"
+                SelectedItem="{Binding SemesterName}"
+                FontSize="{StaticResource MediumFontSize}"
+                Border="Normal"
+                Grid.Row="1">
+                <controls:CustomPicker.Items>
+                    <x:String>Học kỳ 1</x:String>
+                    <x:String>Học kỳ 2</x:String>
+                </controls:CustomPicker.Items>
+            </controls:CustomPicker>
+
+            <!--List Class Report-->
+            <ListView x:Name="ListClass"
+                      ItemsSource="{Binding Classes}"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_OnItemTapped"
+                      Grid.Row="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#bdeee0"
+                                   Padding="20,10,10,10"
+                                   Margin="2,4"
+                                   CornerRadius="5"
+                                   VerticalOptions="Start">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <!--Lớp + Sĩ số + Số lượng đạt-->
+                                    <Grid VerticalOptions="End">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <!--Lop-->
+                                        <Label Text="{Binding Name, StringFormat='Lớp {0}'}"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Grid.ColumnSpan="3"
+                                               TextColor="#076f30"
+                                               FontAttributes="Bold"
+                                               FontSize="18" />
+
+                                        <!--Si So-->
+                                        <Label Text="{StaticResource PeopleIcon}"
+                                               Grid.Row="1"
+                                               Grid.Column="0"
+                                               TextColor="Purple" 
+                                               FontFamily="{StaticResource IoniconsFont}"
+                                               VerticalOptions="Center"/>
+                                        <Label Text="Sĩ số:"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               TextColor="#1f4788" />
+                                        <Label Text="{Binding Students}"
+                                               Grid.Row="1"
+                                               Grid.Column="2"
+                                               TextColor="#1f4788" />
+
+                                        <!--Đạt-->
+                                        <Label Text="{StaticResource CircleCheckIcon}"
+                                               Grid.Row="2"
+                                               Grid.Column="0"
+                                               TextColor="Green" 
+                                               FontFamily="{StaticResource IoniconsFont}"
+                                               VerticalOptions="Center"/>
+                                        <Label Text="Số lượng đạt:"
+                                               Grid.Row="2"
+                                               Grid.Column="1"
+                                               Margin="0,0,5,0"
+                                               TextColor="#1f4788" />
+                                        <Label Text="{Binding Passes}"
+                                               Grid.Row="2"
+                                               Grid.Column="2"
+                                               TextColor="#1f4788" />
+                                    </Grid>
+
+                                    <BoxView Color="#4d8fac"
+                                             WidthRequest="1"
+                                             Margin="0,20,0,0"
+                                             Grid.Column="1" />
+
+                                    <!--Tỷ lệ đạt-->
+                                    <StackLayout Grid.Column="2"
+                                                 VerticalOptions="End">
+                                        <Label Text="Tỷ lệ"
+                                               HorizontalOptions="Center"
+                                               TextColor="#312e87"
+                                               FontSize="16" />
+                                        <Label Text="{Binding PassesPercents, StringFormat='{0:0.00}%'}"
+                                               FontAttributes="Bold"
+                                               TextColor="#312e87"
+                                               HorizontalOptions="Center"
+                                               FontSize="16" />
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<dryIoc:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:dryIoc="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+                         x:Class="StudentManagement.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--#region Text Size-->
+            <Color x:Key="XWhiteColor">White</Color>
+            <Color x:Key="XPageTitleColor">#6d77a0</Color>
+            <Color x:Key="StatusbarColor">#3a4c74</Color>
+            <Color x:Key="PinkColor">#f605ec</Color>
+            <Color x:Key="OrangeColor">#f6934f</Color>
+            <Color x:Key="Grade10ClassBackgroundColor">#d7fdcf</Color>
+            <Color x:Key="Grade11ClassBackgroundColor">#c6f2f1</Color>
+            <Color x:Key="Grade12ClassBackgroundColor">#fde4ff</Color>
+            <Color x:Key="Grade10ClassNameColor">#076f30</Color>
+            <Color x:Key="Grade11ClassNameColor">#1f4788</Color>
+            <Color x:Key="Grade12ClassNameColor">#6e366f</Color>
+            <Color x:Key="MenuBackgroundHeaderColor">#9EE4B6</Color>
+            <Color x:Key="MenuHeaderJobColor">#FCF4FB</Color>
+            <Color x:Key="MenuBackgroundFeaturesColor">#DFFAEA</Color>
+            <!--#endregion-->
+
+            <!--#region Character code-->
+            <!--Icons-->
+            <x:String x:Key="CalendarIcon">&#xF117;</x:String>
+            <x:String x:Key="EditIcon">&#xF12C;</x:String>
+            <x:String x:Key="EmailIcon">&#xF2EB;</x:String>
+            <x:String x:Key="FemaleIcon">&#xF278;</x:String>
+            <x:String x:Key="FlagIcon">&#xF279;</x:String>
+            <x:String x:Key="GearIcon">&#xF13D;</x:String>
+            <x:String x:Key="GenderIcon">&#xF4F5;</x:String>
+            <x:String x:Key="ListIcon">&#xF453;</x:String>
+            <x:String x:Key="LocationIcon">&#xF456;</x:String>
+            <x:String x:Key="LockIcon">&#xF392;</x:String>
+            <x:String x:Key="LogOutIcon">&#xF29F;</x:String>
+            <x:String x:Key="MaleIcon">&#xF2A1;</x:String>
+            <x:String x:Key="ManIcon">&#xF202;</x:String>
+            <x:String x:Key="PeopleIcon">&#xF39E;</x:String>
+            <x:String x:Key="PersonAddIcon">&#xF39F;</x:String>
+            <x:String x:Key="PersonIcon">&#xF3A0;</x:String>
+            <x:String x:Key="SearchIcon">&#xF4A4;</x:String>
+            <x:String x:Key="FilterIcon">&#xF0B0;</x:String>
+            <x:String x:Key="WomanIcon">&#xF25D;</x:String>
+            <x:String x:Key="CircleNoticeIcon">&#xF35B;</x:String>
+            <x:String x:Key="CircleCheckIcon">&#xF120;</x:String>
+            <x:String x:Key="StarIcon">&#xF2FC;</x:String>
+            <x:String x:Key="DocumentTextIcon">&#xf12e;</x:String>
+            <!--#endregion-->
+
+            <!--#region Text Size-->
+            <OnIdiom x:Key="NanoFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>9</OnIdiom.Phone>
+                <OnIdiom.Tablet>12</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="MicroFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>10</OnIdiom.Phone>
+                <OnIdiom.Tablet>13</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="SmallFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>11</OnIdiom.Phone>
+                <OnIdiom.Tablet>14</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="MediumFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>13</OnIdiom.Phone>
+                <OnIdiom.Tablet>16</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="LargeFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>15</OnIdiom.Phone>
+                <OnIdiom.Tablet>18</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="XLargeFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>17</OnIdiom.Phone>
+                <OnIdiom.Tablet>20</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="XxLargeFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>19</OnIdiom.Phone>
+                <OnIdiom.Tablet>22</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="XxxLargeFontSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>21</OnIdiom.Phone>
+                <OnIdiom.Tablet>24</OnIdiom.Tablet>
+            </OnIdiom>
+            <!--#endregion-->
+
+            <!--#region Image & Icon size-->
+            <OnIdiom x:Key="SmallIconSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>15</OnIdiom.Phone>
+                <OnIdiom.Tablet>20</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="MediumIconSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>20</OnIdiom.Phone>
+                <OnIdiom.Tablet>35</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="IconSettingsSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>25</OnIdiom.Phone>
+                <OnIdiom.Tablet>40</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="LargeIconSize" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>30</OnIdiom.Phone>
+                <OnIdiom.Tablet>50</OnIdiom.Tablet>
+            </OnIdiom>
+            <!--#endregion-->
+
+            <!--#region Distance-->
+            <OnIdiom x:Key="SmallSpacing" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>3</OnIdiom.Phone>
+                <OnIdiom.Tablet>10</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="MediumSpacing" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>6</OnIdiom.Phone>
+                <OnIdiom.Tablet>15</OnIdiom.Tablet>
+            </OnIdiom>
+            <OnIdiom x:Key="LargeSpacing" x:TypeArguments="x:Double">
+                <OnIdiom.Phone>10</OnIdiom.Phone>
+                <OnIdiom.Tablet>20</OnIdiom.Tablet>
+            </OnIdiom>
+            <x:Double x:Key="MenuFeaturesColumnSpacing">10</x:Double>
+            <GridLength x:Key="MenuFeaturesIconWidth">50</GridLength>
+            <!--#endregion-->
+
+            <!--  Font ionicons  -->
+            <OnPlatform x:Key="IoniconsFont" x:TypeArguments="x:String">
+                <On Platform="Android" Value="ionicons.ttf#Ionicons" />
+                <On Platform="iOS" Value="Ionicons" />
+            </OnPlatform>
+
+            <!--#region Styles-->
+            <Style x:Key="MediumLabelIconStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource MediumIconSize}"/>
+                <Setter Property="FontFamily" Value="{StaticResource IoniconsFont}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="MenuFeaturesIconStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource IconSettingsSize}"/>
+                <Setter Property="FontFamily" Value="{StaticResource IoniconsFont}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="#9D9D9D"/>
+                <Setter Property="Margin" Value="15,0,10,0"/>
+            </Style>
+            <Style x:Key="MenuFeaturesLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource XLargeFontSize}"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="#9D9D9D"/>
+            </Style>
+            <Style x:Key="ListSmallItemIconStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}"/>
+                <Setter Property="FontFamily" Value="{StaticResource IoniconsFont}"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="ListSmallItemLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SmallFontSize}"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,20,0"/>
+            </Style>
+            <!--#endregion-->
+        </ResourceDictionary>
+    </Application.Resources>
+</dryIoc:PrismApplication>

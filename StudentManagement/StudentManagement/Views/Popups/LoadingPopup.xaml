@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="StudentManagement.Views.Popups.LoadingPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="200"
+            DurationOut="200"
+            EasingIn="CubicOut"
+            EasingOut="CubicOut"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame BackgroundColor="#88000000"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="CenterAndExpand"
+           Padding="10"
+           CornerRadius="15"
+           HasShadow="False">
+        <StackLayout>
+            <ActivityIndicator x:Name="LoadingIndicator"
+                               HorizontalOptions="CenterAndExpand"
+                               WidthRequest="45"
+                               HeightRequest="45"/>
+            <Label x:Name="LabelLoadingMessage"
+                   Text="Loading..."
+                   TextColor="White"
+                   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

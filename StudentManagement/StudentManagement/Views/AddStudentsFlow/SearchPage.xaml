@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagement.Views.AddStudentsFlow.SearchPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding PageTitle}">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20"
+                  RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="{Binding Title}" 
+                       TextColor="{StaticResource Grade10ClassNameColor}"
+                       FontAttributes="Bold"
+                       FontSize="{StaticResource XLargeFontSize}"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       IsVisible="False"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Margin="0,20,0,30"/>
+
+                <!--Họ và tên-->
+                <Label Text="Tên"
+                       TextColor="Purple"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <Entry 
+                    Text="{Binding FullName}"
+                    Placeholder="Tất cả"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+                <!--Ngày sinh-->
+                <Label Text="Ngày sinh"
+                       TextColor="Purple"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <controls:CustomDatePicker 
+                    Border="Normal"
+                    Placeholder="Tất cả"
+                    HasPlaceholder="True"
+                    Format="dd-MM-yyyy"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Date="{Binding DoB}"/>
+
+                <!--Giới tính-->
+                <Label Text="Giới tính"
+                       TextColor="Purple"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <controls:CustomPicker
+                    x:Name="PickerGioiTinh"
+                    Border="Normal"
+                    FontSize="{StaticResource MediumFontSize}"
+                    SelectedIndex="0"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Title="Chọn giới tính"
+                    SelectedItem="{Binding Gender}">
+                    <controls:CustomPicker.Items>
+                        <x:String>Tất cả</x:String>
+                        <x:String>Nam</x:String>
+                        <x:String>Nữ</x:String>
+                    </controls:CustomPicker.Items>
+                </controls:CustomPicker>
+
+                <!--Class-->
+                <Label Text="Lớp"
+                       TextColor="Purple"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <controls:CustomPicker
+                    x:Name="PickerClass"
+                    SelectedItem="{Binding ClassName}"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Border="Normal"
+                    Title="Chọn lớp"/>
+
+                <!--Năm học-->
+                <Label Text="Năm học"
+                       TextColor="Purple"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <controls:CustomPicker
+                    x:Name="PickerNamHoc"
+                    SelectedItem="{Binding Address}"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Border="Normal"
+                    Title="Chọn năm học"/>
+
+                <!--Học kì-->
+                <Label Text="Học kỳ"
+                       TextColor="Purple"
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <controls:CustomPicker
+                    x:Name="PickerHocKi"
+                    SelectedItem="{Binding Semeter}"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Border="Normal"
+                    Title="Chọn học kì"/>
+
+
+                <!--Điểm trung bình-->
+                <Label Text="Điểm trung bình"
+                       TextColor="Purple"
+                       Grid.Row="7"
+                       Grid.Column="0"
+                       VerticalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <Entry 
+                    Text="{Binding AvgScore}"
+                    Placeholder="Tất cả"
+                    Keyboard="Numeric"
+                    FontSize="{StaticResource MediumFontSize}"
+                    Grid.Row="7"
+                    Grid.Column="1"/>
+
+                <!--Continue Button-->
+                <Button Text="Tìm kiếm"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="End"
+                    Command="{Binding SearchCommand}"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

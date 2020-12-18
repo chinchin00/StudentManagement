@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="StudentManagement.Views.CommonPage.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:StudentManagement.Controls;assembly=StudentManagement"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Background  -->
+            <Image
+                Grid.Row="0"
+                Grid.RowSpan="5"
+                Aspect="AspectFill"
+                Source="bg_login_blur.png" />
+
+            <!--  Logo  -->
+            <Image
+                Grid.Row="0"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                Source="logo_app.png"
+                VerticalOptions="End"
+                WidthRequest="80" />
+
+            <Label
+                Grid.Row="1"
+                Margin="0,0,0,30"
+                FontSize="{StaticResource XLargeFontSize}"
+                HorizontalTextAlignment="Center"
+                Text="Quản lý học sinh"
+                TextColor="{StaticResource Grade11ClassNameColor}" />
+
+            <!--  Username  -->
+            <Frame
+                Grid.Row="2"
+                Margin="50,0"
+                Padding="15,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Style="{StaticResource MediumLabelIconStyle}"
+                        Text="{StaticResource PersonIcon}"
+                        TextColor="Purple" />
+                    <controls:CustomEntry
+                        FontSize="{StaticResource MediumFontSize}"
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Email"
+                        Placeholder="Tên đăng nhập"
+                        Text="{Binding Username}" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Password  -->
+            <Frame
+                Grid.Row="3"
+                Margin="50,0"
+                Padding="15,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Style="{StaticResource MediumLabelIconStyle}"
+                        Text="{StaticResource LockIcon}"
+                        TextColor="Purple" />
+                    <controls:CustomEntry
+                        FontSize="{StaticResource MediumFontSize}"
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="True"
+                        Placeholder="Mật khẩu"
+                        Text="{Binding Password}" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Login button  -->
+            <controls:CustomButton
+                Grid.Row="4"
+                Margin="70,40"
+                AllCaps="False"
+                BackgroundColor="{StaticResource OrangeColor}"
+                BorderRadius="0"
+                Command="{Binding LoginCommand}"
+                Text="Đăng nhập"
+                TextColor="White"
+                VerticalOptions="Start" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
