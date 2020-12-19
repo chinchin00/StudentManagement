@@ -322,8 +322,7 @@ namespace BottomBar.Droid.Renderers
                 page.PropertyChanged += OnPagePropertyChanged;
             }
         }
-
-	    void OnPagePropertyChanged(object sender, PropertyChangedEventArgs e)
+  void OnPagePropertyChanged(object sender, PropertyChangedEventArgs e)
 	    {
 	        if (e.PropertyName == BottomBarPageExtensions.BadgeCountProperty.PropertyName)
 	        {
@@ -332,6 +331,7 @@ namespace BottomBar.Droid.Renderers
 	            CreateOrUpdateBadgeForPage(page);
 	        }
 	    }
+	  
 
         /// <summary>
         /// Creates or updates a badge for a page
