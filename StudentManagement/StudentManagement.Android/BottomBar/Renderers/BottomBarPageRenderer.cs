@@ -322,7 +322,15 @@ namespace BottomBar.Droid.Renderers
                 page.PropertyChanged += OnPagePropertyChanged;
             }
         }
+  void OnPagePropertyChanged(object sender, PropertyChangedEventArgs e)
+	    {
+	        if (e.PropertyName == BottomBarPageExtensions.BadgeCountProperty.PropertyName)
+	        {
+	            var page = (Page)sender;
 
+	            CreateOrUpdateBadgeForPage(page);
+	        }
+	    }
 	  
 
         /// <summary>
