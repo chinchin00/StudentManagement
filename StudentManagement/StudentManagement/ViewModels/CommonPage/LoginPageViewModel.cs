@@ -29,19 +29,20 @@ namespace StudentManagement.ViewModels.CommonPage
             get => _username;
             set => SetProperty(ref _username, value);
         }
+
         public string Password
         {
             get => _password;
             set => SetProperty(ref _password, value);
         }
 
+
         // Commands
         public ICommand LoginCommand { get; set; }
 
         #endregion
 
-        public LoginPageViewModel(INavigationService navigationService = null,
-            IPageDialogService dialogService = null,
+        public LoginPageViewModel(INavigationService navigationService = null, IPageDialogService dialogService = null,
             ISQLiteHelper sqLiteHelper = null) : base(navigationService, dialogService, sqLiteHelper)
         {
             LoginCommand = new DelegateCommand(LoginExecute);
@@ -55,13 +56,16 @@ namespace StudentManagement.ViewModels.CommonPage
                 return;
 
             LoadingPopup.Instance.ShowLoading();
+
             await Task.Delay(500);
+
             if (!UserHelper.Instance.Login(Database, Username, Password))
             {
                 LoadingPopup.Instance.HideLoading();
                 await Dialog.DisplayAlertAsync("Thông báo", "Tên đăng nhập hoặc mật khẩu chưa chính xác", "OK");
                 return;
             }
+
             await Task.Delay(500);
             LoadingPopup.Instance.HideLoading();
 
