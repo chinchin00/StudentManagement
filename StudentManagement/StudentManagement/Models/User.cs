@@ -9,9 +9,9 @@ namespace StudentManagement.Models
 
         public string Name { get; set; }
 
-        public string Role { get; set; }
-
         public string Avatar { get; set; }
+        
+        public string Role { get; set; }
 
         public int ClassId { get; set; }
 

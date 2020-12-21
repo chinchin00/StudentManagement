@@ -1,8 +1,8 @@
-﻿using StudentManagement.Helpers;
-using StudentManagement.Models;
-using StudentManagement.ViewModels.CommonPage;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using StudentManagement.Models;
+using StudentManagement.Helpers;
+using StudentManagement.ViewModels.CommonPage;
 
 namespace StudentManagement.Views.CommonPage
 {
@@ -22,7 +22,6 @@ namespace StudentManagement.Views.CommonPage
             var user = vm.Database.GetUser();
             if (user.Role.Equals(RoleManager.StudentRole))
                 return;
-            //vm.StudentItemTapped(student);
         }
     }
 }
