@@ -3010,11 +3010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+      "projectUniqueName": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
       "projectName": "StudentManagement",
-      "projectPath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+      "projectPath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
       "packagesPath": "C:\\Users\\Chin Chin\\.nuget\\packages\\",
-      "outputPath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\obj\\",
+      "outputPath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -3152,7 +3152,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

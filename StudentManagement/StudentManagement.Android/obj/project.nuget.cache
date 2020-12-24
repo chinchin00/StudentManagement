@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5eVgPHmmiyXawZORxx3jUQY1zAWYQ2/imeppIps5UGQK8B7wq5GmlhYXh3Szs/jcsDhkC7YOzYXO3HmXhaewYA==",
+  "dgSpecHash": "WWe4wF9m7ciDTdxfcFJuvJV/J8CO9VFlYAL9f5dKjtH39UsikrQcohMCSc5BwqFuWmAyGqnHuIvjFmG7sfAQ3g==",
   "success": true,
-  "projectFilePath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
+  "projectFilePath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chin Chin\\.nuget\\packages\\bottomnavigationbar\\1.4.0.3\\bottomnavigationbar.1.4.0.3.nupkg.sha512",
     "C:\\Users\\Chin Chin\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",

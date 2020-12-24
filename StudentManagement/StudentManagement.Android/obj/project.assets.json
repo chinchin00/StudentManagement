@@ -3500,11 +3500,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
+      "projectUniqueName": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
       "projectName": "StudentManagement.Android",
-      "projectPath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
+      "projectPath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement.Android\\StudentManagement.Android.csproj",
       "packagesPath": "C:\\Users\\Chin Chin\\.nuget\\packages\\",
-      "outputPath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement.Android\\obj\\",
+      "outputPath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3525,8 +3525,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
-              "projectPath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj"
+            "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
+              "projectPath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj"
             }
           }
         }

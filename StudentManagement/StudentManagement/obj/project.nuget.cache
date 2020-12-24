@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ipYt8PxB0K9gmpn4KyeTqQQpP603EvM6UzOuzjBlYLEhLII1JADqULHFNRrYlz65duPCuj8eMZqUkwG4X3qfTg==",
+  "dgSpecHash": "dHBh0cwpfWi3EfHP2LsnNC+HSyRR2hQJ8Wbu/BZnpuw3iGigpYx47bWqmtLpEZID3SvCq24n8HrH9VaL2VI5kQ==",
   "success": true,
-  "projectFilePath": "D:\\UIT\\NMCNPM\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+  "projectFilePath": "D:\\UIT\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chin Chin\\.nuget\\packages\\commonservicelocator\\2.0.5\\commonservicelocator.2.0.5.nupkg.sha512",
     "C:\\Users\\Chin Chin\\.nuget\\packages\\dryioc.dll\\4.5.1\\dryioc.dll.4.5.1.nupkg.sha512",
